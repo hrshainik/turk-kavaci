@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+$clr1: #DCCA87;
+$clr2: #6A6A6A;
+$clr3: #0C0B08;
+$clr4: #0C0C0C;
+$clr5: #ffffff;
+$clr6: #aaaaaa;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: $clr3;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+p,h1{
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+
+.sub-heading{
+    font-family: "Cormorant Upright", serif;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    font-style: italic;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: $clr1;
+}
+.small-heading{
+    font-family: "Cormorant Upright", serif;
+    font-size: 1.5rem;
+    line-height: 130%;
+    color: $clr5;
+}
+.h-main {
+    font-family: "Cormorant Upright", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9rem;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: $clr1;
+
+    &-s {
+        font-size: 6.4rem;
+    }
+}
+
+.h-sub {
+    font-family: "Cormorant Upright", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.3rem;
+    line-height: 130%;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: $clr5;
+}
+
+.para {
+font-style: normal;
+font-weight: normal;
+font-size: 1.6rem;
+line-height: 175%;
+letter-spacing: 0.04em;
+color: $clr6;
+}
+
+.btn {
+    padding: 0.8rem 3.2rem;
+    border: none;
+    margin-top: 5rem;
+}
+
+.btn-main {
+    background-color: $clr1;
+    color: $clr3;
+    font-family: "Cormorant Upright", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    min-height: 10rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $clr3;
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.items{
+    display: flex;
+    flex-basis: 40%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.items li{
+    font-size: 1.6rem;
+    list-style: none;
+   
+}
+
+.items li a{
+    color: $clr5;
+    text-decoration: none;
+}
+
+ li a::after {
+    content: "";
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: rgb(255, 255, 255);
+    transition: 500ms;
+  }
+  
+   li a:hover::after {
+    width: 100%;
+  }
+
+  .burger{
+      display: none;
+      cursor: pointer;
+      margin-top: -8px;
+  }
+
+  .burger div{
+      width: 2.5rem;
+      height: 2.5px;
+      background-color: $clr1;
+      margin-top: 5px;
+  }
+
+.hero {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 4rem;
+    min-height: 100vh;
+
+    &-l {
+        flex: calc(50% - 2rem);
+
+        & .h-sub {
+            margin-bottom: 0.8rem;
+        }
+
+        & .h-main {
+            margin-bottom: 3rem;
+        }
+
+        & .para {
+            margin-bottom: 3rem;
+        }
+    }
+    
+    &-r {
+        flex: calc(50% - 2rem);
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.hero-img {
+    width: 80%;
+    position: relative;
+
+    & img {
+        display: block;
+    }
+
+    &::after, &::before {
+        position: absolute;
+        content: "";
+        background-color: $clr1;
+        width: 80%;
+        height: 80%;
+        z-index: -3;
+    }
+
+    &::before {
+        top: -1.2rem;
+        right: -1.2rem;
+    }
+
+    &::after {
+        bottom: -1.2rem;
+        left: -1.2rem;
+    }
+}
+
+.about {
+    padding: 12rem 0rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 4rem;
+    img{
+        width: 50%;
+    }
+
+    &-l {
+        flex: calc(50% - 2rem);
+    }
+    &-grid {
+        display: flex;
+        gap: 2rem;
+        div{
+            display: flex;
+            gap: 2rem;
+            flex-flow: column wrap;
+            img{
+                width: 100%;
+            }
+        }
+        & .r-img-one {
+            flex-grow: 1;
+        }
+        
+        & .r-img-two {
+            flex-grow: 1;
+        }
+    }
+
+    &-r {
+        flex: calc(50% - 2rem);
+        
+    }
+}
+
+.btnn {
+    padding: 1rem 1.5rem;
+    border: none;
+
+    &-l {
+        font-size: 1.8rem;
+    }
+
+    &-m {
+        font-size: 1.6rem;
+    }
+
+    &-s {
+        font-size: 1.4rem;
+    }
+}
+
+.menu{
+    color: #fff;
+    padding: 12rem 0rem;
+
+    .menu-header{
+        text-align: center;
+        padding-bottom: 2rem;
+        padding-top: 5rem;
+    }
+
+    .img-card-con{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 2.5rem;
+
+        .img-card{
+            flex: 1 25rem;
+
+                img{
+                    display: block;
+                    height: auto;
+                    width: 100%;
+                }
+              
+
+            .card-info{
+            padding: 2rem;
+            border-top: none;
+            border: 1px solid #dcca8760;
+           border-top: 1px solid $clr3;
+
+            i{
+                color: $clr1;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                h3{
+                    font-family: "Cormorant Upright", serif;
+                    font-size: 2.8rem;
+                    line-height: 3.3rem;
+                    font-style: italic;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    
+                }
+                span{
+                    font-size: 2.5rem;
+                    padding: 0rem .5rem;
+                    margin-left: .5rem;
+                    font-family: "Cormorant Upright", serif;
+                    background-color: $clr1;
+                    color: $clr3;
+                }
+            }
+                }
+
+                .desc{
+                    font-size: 2rem;
+                    line-height: 2.6rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                }
+              }
+            
+        }
+    }
+
+
+
+.chef{
+    color: $clr5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12rem 0rem;
+    flex-flow: row wrap;
+    gap: 3rem;
+    font-family: "Cormorant Upright", serif;
+
+
+    .hero-img{
+        display: flex;
+        justify-content: center;
+        flex: calc(50% - 1.5rem);
+
+        img{
+            width: 100%;
+            position: relative;
+        }
+    }
+
+    .chef-r{
+            flex: calc(50% - 1.5rem);
+        h4{
+            font-size: 2.3rem;
+            line-height: 130%;
+        }
+
+        h1{
+            line-height: 175%;
+        }
+
+        p{
+            font-size: 2rem;
+            line-height: 150%;
+            margin-top: 5%;
+        }
+
+        h3{
+            font-size: 3.2rem;
+            color: $clr1;
+            margin-top: 10%;
+        }
+
+        span{
+            font-family:'Open Sans',sans-serif;
+            font-size: 1.6rem;
+            line-height: 150%;
+        }
+
+        .sign{
+            margin-top: 5%;
+
+            img{
+                width: 20rem;
+                line-height: 175%;
+            }
+    }
+
+    
+    }
+}
+
+.reviews{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    .reviews-header{
+        h4{
+            font-family:"Cormorant Upright", serif ;
+            font-size: 2.3rem;
+            line-height: 130%;
+            color: $clr5;
+        }
+
+    }
+.reviews-bottom{
+    padding: 8rem 0rem;
+    .reviews-container{
+         display: flex;
+         flex-flow: row wrap;
+        .reviews{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            flex: 1 50%;
+            margin-bottom: 5%;
+
+            @media only screen and (max-width: 668px) {
+                flex: 1 100%;
+            }
+            .customer-img{
+                img{
+                    height: auto;
+                    width: 12rem;
+                }
+            }
+            div{
+                p{
+                    font-size: 1.5rem;
+                }
+
+                h3{
+                    color: $clr1;
+                }
+               }
+        }
+    }
+}
+    
+}
+
+.subscribe{
+    color: $clr5;
+    padding: 8rem 0rem;
+    border: 1px solid #dcca875e;
+    background-color: $clr4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 10rem;
+    text-align: center;
+    box-shadow: 6px 7px 5px 0px rgba(0,0,0,0.21);
+
+
+
+    .subscribe-header{
+        h4{
+            font-size: 2.3rem;
+            font-family:"Cormorant Upright", serif ;  
+            margin-bottom: 3%;     
+         }
+        p{
+            font-size: 1.6rem;
+            margin-top: 3%;
+            line-height: 175%;
+        }
+    }
+
+    .subscribe-input-box{
+        text-align: center;
+        input{
+            text-align: left;
+            padding: 1.4rem 10rem;
+            margin-right: 2rem;
+            border: none;
+            background-color: $clr3;
+            border: 1px solid #dcca8759;
+
+            @media only screen and (max-width: 668px) {
+                width: 80%;
+                padding: 1.4rem;
+                margin-top: -5rem;
+                margin-right: 0rem;
+            }
+        }
+    }
+}
+
+.gallery{
+    padding: 12rem 0rem;
+    color: $clr5;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    .gallery-l{
+        flex: 1 40%;
+        h4{
+            font-size: 2.3rem;
+            font-family:"Cormorant Upright", serif ;  
+            margin-bottom: 3%;     
+
+         }
+         p{
+            font-size: 1.6rem;
+            margin-bottom: 3%;
+            line-height: 175%;
+        }
+    }
+
+    .gallery-r{
+        flex: 1 60%;
+        .gallery-img-container{
+            display: flex;
+            flex-flow: row wrap;
+            img{
+                height: 30%;
+                width: 20%;
+            }
+    }
+}
+}
+
+.nav-title {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3.6rem;
+}
+
+footer{
+   
+.footer-container{
+    padding: 12rem 0rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    p{
+        font-size: 1.6rem;
+        line-height: 130%;
+        margin-top: 5%;
+
+        @media only screen and (max-width: 668px) {
+            text-align: center;
+        }
+    }
+    
+    .h-sub{
+        font-size: 3.2rem;
+    }
+
+    .footer-m{
+        
+
+        img{
+            width: 100%;
+        }
+        .icon{
+            text-align: center;
+            margin-top: 5%;
+
+            i{
+                font-size: 2.3rem;
+                margin-left: 2rem;
+                color: $clr5;
+            }
+        }
+    }
+
+    .footer-l {
+        @media only screen and (max-width: 668px) {
+            text-align: center;
+        }
+    }
+
+    .footer-r {
+        @media only screen and (max-width: 668px) {
+            text-align: center;
+        }
+    }
+}
+.copyright{
+    color: $clr5;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-bottom: 1rem;
+}
+}
+
+// media query
+
+@media screen and (max-width:668px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        min-height: 8rem;
+    }
+    .nav-title{
+        font-size: 2.5rem;
+    }
+   .items{
+       position: absolute;
+       top: 10rem;
+       right: 0;
+       height: calc(100vh - 10rem);
+       width: 50%;
+       background-color: $clr3;
+       display: none;
+       flex-flow: column wrap;
+       transform: translateX(100%);
+       transition: transform 0.5s ease;
+   }
+   .burger{
+       display: block;
+   }
+
+   .nav-active{
+       transform: translateX(0%);
+       display: flex;
+   }
+   .hero{
+       display: flex;
+       flex-flow: column;
+       align-items: center;
+       justify-content: center;
+       margin-top: 5rem;
+       h1{
+           font-size: 5.2rem;
+           line-height: 1;
+       }
+       button{
+           margin-top: 0rem;
+       }
+       .hero-r{
+           margin-top: 5rem;
+       }
+   }
+
+   .about{
+       flex-direction: column;
+       h2{
+           font-size: 4.2rem;
+           margin-bottom: 2rem;
+       }
+       .about-l{
+           order: 2;
+       }
+   }
+   .menu{
+       padding: 0rem 0rem;
+       .menu-header{
+           h1{
+               font-size: 4.2rem;
+               margin-bottom: 2rem;
+           }
+       }
+   }
+
+   .chef{
+       .hero-img{
+           order: 2;
+       }
+    .chef-r{
+        h1{
+            font-size: 4.2rem;
+            line-height: 1;
+        }
+    }
+   }
+
+   .reviews{
+       .reviews-header{
+           h1{
+               font-size: 4.8rem;
+               line-height: 1;
+           }
+       }
+   }
+   
+   .subscribe{
+    .subscribe-header{
+        h1{
+            font-size: 4.2rem;
+            line-height: 1;
+        }
+    }
+}
+    footer{
+        .footer-container{
+            gap: 3rem;
+        }
+    }
+}
