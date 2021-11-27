@@ -5,6 +5,10 @@ const navSlide= ()=>{
 burGer.addEventListener("click",() =>{
     navLinks.classList.toggle("nav-active")
 });
+
+navLinks.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-active")
+})
 }
 
 navSlide();
