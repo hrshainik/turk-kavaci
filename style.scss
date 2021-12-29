@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Cormorant+Upright:wght@300;400;500;600;700&family=Montagu+Slab:wght@500&display=swap");
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
 
 $clr1: #dcca87;
 $clr2: #6a6a6a;
@@ -8,9 +11,73 @@ $clr4: #0c0c0c;
 $clr5: #ffffff;
 $clr6: #aaaaaa;
 
-html {
-  font-size: 10px;
-  scroll-behavior: smooth;
+.mySwiper {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  position: relative;
+
+  .slider {
+    min-height: 45vh;
+
+    .swiper-slide {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .slide-inner {
+        // position: absolute;
+        width: 90%;
+        height: calc(100vh - 8rem);
+        // left: 0;
+        // top: 0;
+        margin: 0 auto;
+
+        // img {
+        //   position: absolute;
+        //   width: 100%;
+        //   left: 0;
+        //   top: 0;
+        //   bottom: 0;
+        //   margin: auto;
+        // }
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background-color: rgba($color: #fff, $alpha: 0);
+  }
+
+  .swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 3;
+
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+
+    span {
+      margin-bottom: 3rem !important;
+      font-family: "Cormorant Upright", serif;
+      font-size: 2.4rem;
+      letter-spacing: 0.05em;
+      color: #fff;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
 
 ::selection {
@@ -40,7 +107,7 @@ html {
 
 body {
   background-color: $clr3;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cabin", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -143,8 +210,8 @@ li {
 nav {
   display: flex;
   flex-flow: row wrap;
-  flex-basis: 100%;
-  max-height: 8rem;
+  // flex-basis: 100%;
+  min-height: 8rem;
   align-items: center;
   justify-content: space-between;
   background-color: $clr3;
@@ -155,7 +222,6 @@ nav {
 
 .items {
   display: flex;
-  flex-basis: 40%;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
@@ -164,10 +230,11 @@ nav {
 .items li {
   font-size: 1.6rem;
   list-style: none;
+  margin-left: 3rem;
 }
 
 .items li a {
-  color: $clr5;
+  color: #e0e0e0;
   text-decoration: none;
   transition: all 0.5s;
   text-transform: uppercase;
@@ -212,6 +279,10 @@ li a:hover::after {
   min-height: calc(100vh - 8rem);
 
   &-l {
+    @media only screen and (max-width: 715px) {
+      margin-top: 3rem;
+    }
+
     flex: calc(50% - 2rem);
 
     & .h-sub {
@@ -237,6 +308,11 @@ li a:hover::after {
 .hero-img {
   width: 80%;
   position: relative;
+
+  @media only screen and (max-width: 715px) {
+    width: 100%;
+    height: 60%;
+  }
 
   & img {
     display: block;
@@ -403,10 +479,8 @@ li a:hover::after {
             font-size: 2rem;
             padding: 0rem 0.5rem;
             margin-left: 0.5rem;
-            font-family: "Cormorant Upright", serif;
             background-color: $clr1;
             color: $clr3;
-            font-family: "Poppins", sans-serif;
           }
         }
       }
@@ -474,6 +548,7 @@ li a:hover::after {
       font-size: 2rem;
       line-height: 150%;
       margin-top: 5%;
+      font-family: "Cabin", sans-serif;
     }
 
     h3 {
@@ -483,7 +558,7 @@ li a:hover::after {
     }
 
     span {
-      font-family: "Poppins", sans-serif;
+      // font-family: "Poppins", sans-serif;
       font-size: 1.6rem;
       line-height: 150%;
     }
@@ -748,7 +823,7 @@ footer {
 
 // media query
 
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 715px) {
   body {
     overflow-x: hidden;
   }
@@ -784,9 +859,9 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    justify-content: flex-start;
+    margin-top: 3rem;
+
     h1 {
       font-size: 5.2rem;
       line-height: 1;
@@ -796,6 +871,15 @@ footer {
     }
     .hero-r {
       margin-top: 5rem;
+    }
+
+    &-r {
+      flex: 1 100%;
+      width: 80%;
+    }
+
+    &-l {
+      flex: 1 100%;
     }
   }
 
@@ -884,7 +968,7 @@ footer {
   font-family: "Montagu Slab", serif;
   font-size: 7rem;
   line-height: 100%;
-  font-family: 400;
+  font-weight: 400;
 }
 
 .customer-img {

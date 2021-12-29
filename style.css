@@ -1,8 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&family=Cormorant+Upright:wght@300;400;500;600;700&family=Montagu+Slab:wght@500&display=swap");
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+}
+
+.mySwiper {
+  width: 100%;
+  height: calc(100vh - 8rem);
+  position: relative;
+}
+
+.mySwiper .slider {
+  min-height: 45vh;
+}
+
+.mySwiper .slider .swiper-slide {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mySwiper .slider .swiper-slide .slide-inner {
+  width: 90%;
+  height: calc(100vh - 8rem);
+  margin: 0 auto;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.mySwiper .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 768px) {
+  .mySwiper .swiper-pagination {
+    display: none;
+  }
+}
+
+.mySwiper .swiper-pagination span {
+  margin-bottom: 3rem !important;
+  font-family: "Cormorant Upright", serif;
+  font-size: 2.4rem;
+  letter-spacing: 0.05em;
+  color: #fff;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.mySwiper .swiper-pagination span:focus {
+  outline: none;
 }
 
 ::-moz-selection {
@@ -38,7 +113,7 @@ html {
 
 body {
   background-color: #0c0b08;
-  font-family: "Poppins", sans-serif;
+  font-family: "Cabin", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,9 +233,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  max-height: 8rem;
+  min-height: 8rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -177,8 +250,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -193,10 +264,11 @@ nav {
 .items li {
   font-size: 1.6rem;
   list-style: none;
+  margin-left: 3rem;
 }
 
 .items li a {
-  color: #ffffff;
+  color: #e0e0e0;
   text-decoration: none;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -256,6 +328,12 @@ li a:hover::after {
           flex: calc(50% - 2rem);
 }
 
+@media only screen and (max-width: 715px) {
+  .hero-l {
+    margin-top: 3rem;
+  }
+}
+
 .hero-l .h-sub {
   margin-bottom: 0.8rem;
 }
@@ -283,6 +361,13 @@ li a:hover::after {
 .hero-img {
   width: 80%;
   position: relative;
+}
+
+@media only screen and (max-width: 715px) {
+  .hero-img {
+    width: 100%;
+    height: 60%;
+  }
 }
 
 .hero-img img {
@@ -501,10 +586,8 @@ li a:hover::after {
   font-size: 2rem;
   padding: 0rem 0.5rem;
   margin-left: 0.5rem;
-  font-family: "Cormorant Upright", serif;
   background-color: #dcca87;
   color: #0c0b08;
-  font-family: "Poppins", sans-serif;
 }
 
 .menu .img-card-con .img-card .desc {
@@ -592,6 +675,7 @@ li a:hover::after {
   font-size: 2rem;
   line-height: 150%;
   margin-top: 5%;
+  font-family: "Cabin", sans-serif;
 }
 
 .chef .chef-r h3 {
@@ -601,7 +685,6 @@ li a:hover::after {
 }
 
 .chef .chef-r span {
-  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   line-height: 150%;
 }
@@ -953,7 +1036,7 @@ footer .copyright {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 715px) {
   body {
     overflow-x: hidden;
   }
@@ -1008,11 +1091,10 @@ footer .copyright {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 3rem;
   }
   .hero h1 {
     font-size: 5.2rem;
@@ -1023,6 +1105,17 @@ footer .copyright {
   }
   .hero .hero-r {
     margin-top: 5rem;
+  }
+  .hero-r {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
+    width: 80%;
+  }
+  .hero-l {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 100%;
+            flex: 1 100%;
   }
   .about {
     -webkit-box-orient: vertical;
@@ -1093,7 +1186,7 @@ footer .copyright {
   font-family: "Montagu Slab", serif;
   font-size: 7rem;
   line-height: 100%;
-  font-family: 400;
+  font-weight: 400;
 }
 
 .customer-img {
