@@ -1,8 +1,8 @@
 const navSlide = () => {
-  const burGer = document.querySelector(".burger");
+  const burger = document.querySelector(".burger");
   const navLinks = document.querySelector(".items");
 
-  burGer.addEventListener("click", () => {
+  burger.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
   });
 
@@ -16,7 +16,36 @@ navSlide();
 const interleaveOffset = 0.75;
 
 const swiper = new Swiper(".mySwiper", {
-  direction: "vertical",
+  direction: "horizontal",
+  breakpoints: {
+    715: {
+      direction: "vertical",
+      on: {
+        progress: function () {
+          console.log("test");
+          let swiper = this;
+
+          for (let i = 0; i < swiper.slides.length; i++) {
+            let slideProgress = swiper.slides[i].progress;
+            let innerOffset = swiper.height * interleaveOffset;
+            let innerTranslate = slideProgress * innerOffset;
+
+            TweenMax.set(swiper.slides[i].querySelector(".slide-inner"), {
+              y: innerTranslate,
+            });
+          }
+        },
+        setTransition: function (slider, speed) {
+          let swiper = this;
+          for (let i = 0; i < swiper.slides.length; i++) {
+            swiper.slides[i].style.transition = speed + "ms";
+            swiper.slides[i].querySelector(".slide-inner").style.transition =
+              speed + "ms";
+          }
+        },
+      },
+    },
+  },
   speed: 900,
   mousewheelControl: true,
   watchSlidesProgress: true,
@@ -25,7 +54,7 @@ const swiper = new Swiper(".mySwiper", {
   },
   pagination: {
     el: ".swiper-pagination",
-    clickable: false,
+    clickable: true,
     type: "bullets",
     renderBullet: function (index, className) {
       return (
@@ -33,28 +62,7 @@ const swiper = new Swiper(".mySwiper", {
       );
     },
   },
-  on: {
-    progress: function () {
-      console.log("test");
-      let swiper = this;
-
-      for (let i = 0; i < swiper.slides.length; i++) {
-        let slideProgress = swiper.slides[i].progress;
-        let innerOffset = swiper.height * interleaveOffset;
-        let innerTranslate = slideProgress * innerOffset;
-
-        TweenMax.set(swiper.slides[i].querySelector(".slide-inner"), {
-          y: innerTranslate,
-        });
-      }
-    },
-    setTransition: function (slider, speed) {
-      let swiper = this;
-      for (let i = 0; i < swiper.slides.length; i++) {
-        swiper.slides[i].style.transition = speed + "ms";
-        swiper.slides[i].querySelector(".slide-inner").style.transition =
-          speed + "ms";
-      }
-    },
+  autoplay: {
+    delay: 5000,
   },
 });
