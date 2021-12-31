@@ -1,13 +1,16 @@
 const navSlide = () => {
   const burger = document.querySelector(".burger");
+  const burgerIcon = document.querySelector(".ham");
   const navLinks = document.querySelector(".items");
 
   burger.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
+    burgerIcon.classList.toggle("active");
   });
 
   navLinks.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
+    burgerIcon.classList.toggle("active");
   });
 };
 
