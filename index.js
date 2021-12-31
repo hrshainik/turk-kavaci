@@ -17,8 +17,10 @@ const interleaveOffset = 0.75;
 
 const swiper = new Swiper(".mySwiper", {
   direction: "horizontal",
+  loop: true,
   breakpoints: {
     715: {
+      loop: false,
       direction: "vertical",
       on: {
         progress: function () {

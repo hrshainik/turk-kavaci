@@ -80,6 +80,10 @@ li {
   list-style: none;
 }
 
+.sections {
+  overflow-y: scroll;
+}
+
 .mySwiper {
   width: 100%;
   height: calc(100vh - 8rem);
@@ -564,7 +568,7 @@ nav {
     padding: 0 0 5rem 0;
   }
 
-  & .menu-header {
+  &-header {
     text-align: center;
     padding-bottom: 2rem;
     padding-top: 2rem;
@@ -580,7 +584,7 @@ nav {
       margin: 0 auto;
 
       @include mq(768px) {
-        width: 60%;
+        width: 90%;
       }
     }
   }

@@ -80,6 +80,10 @@ li {
   list-style: none;
 }
 
+.sections {
+  overflow-y: scroll;
+}
+
 .mySwiper {
   width: 100%;
   height: calc(100vh - 8rem);
@@ -703,26 +707,26 @@ nav .burger div {
   }
 }
 
-.menu .menu-header {
+.menu-header {
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
 @media only screen and (max-width: 715px) {
-  .menu .menu-header h1 {
+  .menu-header h1 {
     font-size: 4.2rem;
     margin-bottom: 2rem;
   }
 }
 
-.menu .menu-header .para {
+.menu-header .para {
   margin: 0 auto;
 }
 
 @media only screen and (max-width: 768px) {
-  .menu .menu-header .para {
-    width: 60%;
+  .menu-header .para {
+    width: 90%;
   }
 }
 
