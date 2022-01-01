@@ -37,26 +37,6 @@ html {
 body {
   background-color: #0c0b08;
   font-family: "Cabin", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 920px) {
-  body {
-    overflow-x: hidden;
-  }
-}
-
-body > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 section,
@@ -73,26 +53,29 @@ img {
 
 p,
 h1 {
-  color: #fff;
+  color: #ffffff;
 }
 
 li {
   list-style: none;
 }
 
-.sections {
-  overflow-y: scroll;
-}
-
 .mySwiper {
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh + 8rem);
   position: relative;
+  padding-top: 8rem !important;
+}
+
+@media only screen and (max-width: 920px) {
+  .mySwiper {
+    padding-top: 6rem !important;
+  }
 }
 
 @media only screen and (max-width: 715px) {
   .mySwiper {
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh + 6rem);
     height: unset;
   }
 }
@@ -105,7 +88,7 @@ li {
   overflow: hidden;
   position: relative;
   height: 100%;
-  font-size: 18px;
+  font-size: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,6 +104,12 @@ li {
   width: 90%;
   min-height: calc(100vh - 8rem);
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 920px) {
+  .mySwiper .slider .swiper-slide .slide-inner {
+    min-height: 6rem;
+  }
 }
 
 @media only screen and (max-width: 715px) {
@@ -162,7 +151,7 @@ li {
   font-family: "Cormorant Upright", serif;
   font-size: 2.4rem;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: #ffffff;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -311,6 +300,18 @@ li {
 }
 
 nav {
+  background-color: #0c0b08;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+nav .nav-inner {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,14 +326,23 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #0c0b08;
-  max-width: 120rem;
-  width: 95%;
-  margin: 0 auto;
+}
+
+@media only screen and (max-width: 920px) {
+  nav .nav-inner {
+    min-height: 6rem;
+  }
 }
 
 nav .nav-logo {
   max-width: 20rem;
+}
+
+@media only screen and (max-width: 920px) {
+  nav .nav-logo {
+    max-width: 18rem;
+    margin-left: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 920px) {
@@ -425,9 +435,9 @@ nav .burger div {
 @media only screen and (max-width: 920px) {
   .items {
     position: absolute;
-    top: 8rem;
+    top: 6rem;
     right: 0;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 6rem);
     width: 50%;
     background-color: #0c0b08;
     display: -webkit-box;
@@ -437,14 +447,12 @@ nav .burger div {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    -webkit-transform: translateX(0%) scale(0);
-            transform: translateX(0%) scale(0);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-transform-origin: right;
-            transform-origin: right;
     z-index: 1000;
   }
 }
@@ -495,6 +503,12 @@ nav .burger div {
           align-items: center;
   gap: 4rem;
   min-height: calc(100vh - 8rem);
+}
+
+@media only screen and (max-width: 920px) {
+  .hero {
+    min-height: calc(100vh - 6rem);
+  }
 }
 
 @media only screen and (max-width: 715px) {
@@ -604,7 +618,7 @@ nav .burger div {
 }
 
 .about {
-  padding: 5rem 0rem;
+  padding-top: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,12 +712,12 @@ nav .burger div {
 
 .menu {
   color: #fff;
-  padding: 10rem 0rem;
+  padding-top: 10rem;
 }
 
 @media only screen and (max-width: 715px) {
   .menu {
-    padding: 0 0 5rem 0;
+    padding-top: 6rem;
   }
 }
 
@@ -843,7 +857,7 @@ nav .burger div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10rem 0rem;
+  padding-top: 10rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -964,7 +978,7 @@ nav .burger div {
 
 @media only screen and (max-width: 715px) {
   .reviews-wrapper {
-    padding: 4rem 0 0 0;
+    padding: 6rem 0 0 0;
   }
 }
 

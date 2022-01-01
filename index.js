@@ -1,20 +1,32 @@
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
-  const burgerIcon = document.querySelector(".ham");
-  const navLinks = document.querySelector(".items");
+const burger = document.querySelector(".burger");
+const burgerIcon = document.querySelector(".ham");
+const navLinks = document.querySelector(".items");
+const navItems = navLinks.querySelectorAll("li a");
 
-  burger.addEventListener("click", () => {
+document.addEventListener("click", (e) => {
+  console.log(e.target);
+  if (
+    !e.target.classList.contains("burger") &&
+    !e.target.classList.contains("items") &&
+    !e.target.classList.contains("ham") &&
+    !e.target.classList.contains("line")
+  ) {
+    navLinks.classList.remove("nav-active");
+    burgerIcon.classList.remove("active");
+  }
+});
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("nav-active");
+  burgerIcon.classList.toggle("active");
+});
+
+navItems.forEach((navItem) => {
+  navItem.addEventListener("click", () => {
     navLinks.classList.toggle("nav-active");
     burgerIcon.classList.toggle("active");
   });
-
-  navLinks.addEventListener("click", () => {
-    navLinks.classList.toggle("nav-active");
-    burgerIcon.classList.toggle("active");
-  });
-};
-
-navSlide();
+});
 
 const interleaveOffset = 0.75;
 
