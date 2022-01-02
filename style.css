@@ -66,115 +66,44 @@ a {
   color: inherit;
 }
 
-.lds-ellipsis {
+.loading {
   display: block;
+  height: 4px;
+  width: 130px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #dcca87)), #fff;
+  background: linear-gradient(#dcca87 0 0), #fff;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  -webkit-animation: p6 2s infinite;
+          animation: p6 2s infinite;
   position: absolute;
-  width: 8rem;
-  height: 8rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.lds-ellipsis div {
-  position: absolute;
-  top: 3.3rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  background: #dcca87;
-  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
-          animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-
-.lds-ellipsis div:nth-child(1) {
-  left: 0.8rem;
-  -webkit-animation: lds-ellipsis1 0.6s infinite;
-          animation: lds-ellipsis1 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(2) {
-  left: 0.8rem;
-  -webkit-animation: lds-ellipsis2 0.6s infinite;
-          animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(3) {
-  left: 3.2rem;
-  -webkit-animation: lds-ellipsis2 0.6s infinite;
-          animation: lds-ellipsis2 0.6s infinite;
-}
-
-.lds-ellipsis div:nth-child(4) {
-  left: 5.6rem;
-  -webkit-animation: lds-ellipsis3 0.6s infinite;
-          animation: lds-ellipsis3 0.6s infinite;
-}
-
-@-webkit-keyframes lds-ellipsis1 {
+@-webkit-keyframes p6 {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    background-position: -150% 0, -150% 0;
+  }
+  66% {
+    background-position: 250% 0, -150% 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    background-position: 250% 0, 250% 0;
   }
 }
 
-@keyframes lds-ellipsis1 {
+@keyframes p6 {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    background-position: -150% 0, -150% 0;
+  }
+  66% {
+    background-position: 250% 0, -150% 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes lds-ellipsis3 {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@keyframes lds-ellipsis3 {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-
-@-webkit-keyframes lds-ellipsis2 {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(2.4rem, 0);
-            transform: translate(2.4rem, 0);
-  }
-}
-
-@keyframes lds-ellipsis2 {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  100% {
-    -webkit-transform: translate(2.4rem, 0);
-            transform: translate(2.4rem, 0);
+    background-position: 250% 0, 250% 0;
   }
 }
 
@@ -262,6 +191,8 @@ a {
 
 .mySwiper .swiper-pagination-bullet {
   background-color: rgba(255, 255, 255, 0);
+  width: unset;
+  height: unset;
 }
 
 .mySwiper .swiper-pagination span {
@@ -278,6 +209,18 @@ a {
 
 .mySwiper .swiper-pagination span:focus {
   outline: none;
+}
+
+.mySwiper .swiper-pagination span:last-child {
+  margin-bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
 }
 
 .sub-heading {
@@ -781,10 +724,6 @@ nav .burger div {
     margin-bottom: 2rem;
     font-size: 4.2rem;
   }
-}
-
-.about img {
-  width: 50%;
 }
 
 .about-l {
@@ -1397,11 +1336,17 @@ footer .footer-container .footer-m img {
 footer .footer-container .footer-m .icon {
   text-align: center;
   margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2.5rem;
 }
 
 footer .footer-container .footer-m .icon i {
   font-size: 2.3rem;
-  margin-left: 2rem;
   color: #ffffff;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;

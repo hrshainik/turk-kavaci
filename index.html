@@ -11,15 +11,14 @@
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <meta name="description"
+    content=" To bring together everyone who says no to ordinary food by using familiar ingredients in surprising ways.">
+  <meta name="keywords" content="Kebab, Turk Kavaci">
+  <meta name="author" content="Habibur Rahman">
 </head>
 
 <body>
-  <div class="lds-ellipsis">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <div class="loading"></div>
   <nav>
     <div class="nav-inner">
       <a href="#home" class="nav-logo">
@@ -50,7 +49,7 @@
       <section class="swiper-slide">
         <div class="hero slide-inner">
           <div class="hero-l">
-            <h2 class="h-sub">Chase the new Flavour</h2>
+            <p class="h-sub">Chase the new Flavour</p>
             <h1 class="h-main">Kebabs for the soul</h1>
             <p class="para">
               To bring together everyone who says no to ordinary food by using familiar ingredients in surprising ways.
@@ -59,7 +58,12 @@
           </div>
           <div class="hero-r">
             <div class="hero-img">
-              <img src="img/hero1.jpg" alt="hero image" />
+              <!-- <img src="img/hero1.jpg" alt="hero image" /> -->
+              <picture>
+                <source type="image/webp" srcset="img/hero1.webp">
+                <source type="image/jpeg" srcset="img/hero1.jpg">
+                <img src="img/hero1.jpg" alt="hero image">
+              </picture>
             </div>
           </div>
         </div>
@@ -67,7 +71,7 @@
       <section class="swiper-slide">
         <div class="hero slide-inner">
           <div class="hero-l">
-            <h2 class="h-sub">Chase the new Flavour</h2>
+            <p class="h-sub">Chase the new Flavour</p>
             <h1 class="h-main">Taste the flavors of life</h1>
             <p class="para">
               To bring together everyone who says no to ordinary food by using familiar ingredients in surprising ways.
@@ -76,7 +80,12 @@
           </div>
           <div class="hero-r">
             <div class="hero-img">
-              <img src="img/hero2.jpg" alt="hero image" />
+              <!-- <img src="img/hero2.jpg" alt="hero image" /> -->
+              <picture>
+                <source type="image/webp" srcset="img/hero2.webp">
+                <source type="image/jpeg" srcset="img/hero2.jpg">
+                <img src="img/hero2.jpg" alt="hero image">
+              </picture>
             </div>
           </div>
         </div>
@@ -84,7 +93,7 @@
       <section class="swiper-slide">
         <div class="hero slide-inner">
           <div class="hero-l">
-            <h2 class="h-sub">Chase the new Flavour</h2>
+            <p class="h-sub">Chase the new Flavour</p>
             <h1 class="h-main">Find happiness in every stick!</h1>
             <p class="para">
               To bring together everyone who says no to ordinary food by using familiar ingredients in surprising ways.
@@ -93,7 +102,12 @@
           </div>
           <div class="hero-r">
             <div class="hero-img">
-              <img src="img/hero3.jpg" alt="hero image" />
+              <!-- <img src="img/hero3.jpg" alt="hero image" /> -->
+              <picture>
+                <source type="image/webp" srcset="img/hero3.webp">
+                <source type="image/jpeg" srcset="img/hero3.jpg">
+                <img src="img/hero3.jpg" alt="hero image">
+              </picture>
             </div>
           </div>
         </div>
@@ -105,10 +119,25 @@
   <section class="about" id="about">
     <div class="about-l">
       <div class="about-grid">
-        <img src="img/about1.jpg" alt="" class="l-img" />
+        <!-- <img src="img/about1.jpg" alt="shawarma machine" class="l-img" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/about1.webp">
+          <source type="image/jpeg" srcset="img/about1.jpg">
+          <img src="img/about1.jpg" alt="shawarma machine">
+        </picture>
         <div>
-          <img src="img/about2.jpg" alt="" class="r-img-one" />
-          <img src="img/about3.jpg" alt="" class="r-img-two" />
+          <!-- <img src="img/about2.jpg" alt="smokey grill" class="r-img-one" /> -->
+          <picture>
+            <source type="image/webp" srcset="img/about2.webp">
+            <source type="image/jpeg" srcset="img/about2.jpg">
+            <img src="img/about2.jpg" alt="smokey grill">
+          </picture>
+          <!-- <img src="img/about3.jpg" alt="kebab sticks" class="r-img-two" /> -->
+          <picture>
+            <source type="image/webp" srcset="img/about3.webp">
+            <source type="image/jpeg" srcset="img/about3.jpg">
+            <img src="img/about3.jpg" alt="kebab stick">
+          </picture>
         </div>
       </div>
     </div>
@@ -149,7 +178,12 @@
     </div>
     <div class="img-card-con">
       <div class="img-card">
-        <img src="./img/item1.jpg" alt="" />
+        <!-- <img src="./img/item1.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item1.webp">
+          <source type="image/jpeg" srcset="img/item1.jpg">
+          <img src="img/item1.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -167,7 +201,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item2.jpg" alt="" />
+        <!-- <img src="./img/item2.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item2.webp">
+          <source type="image/jpeg" srcset="img/item2.jpg">
+          <img src="img/item2.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -185,7 +224,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item3.jpg" alt="" />
+        <!-- <img src="./img/item3.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item3.webp">
+          <source type="image/jpeg" srcset="img/item3.jpg">
+          <img src="img/item3.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -203,7 +247,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item4.jpg" alt="" />
+        <!-- <img src="./img/item4.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item4.webp">
+          <source type="image/jpeg" srcset="img/item4.jpg">
+          <img src="img/item4.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -221,7 +270,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item5.jpg" alt="" />
+        <!-- <img src="./img/item5.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item5.webp">
+          <source type="image/jpeg" srcset="img/item5.jpg">
+          <img src="img/item5.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -239,7 +293,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item6.jpg" alt="" />
+        <!-- <img src="./img/item6.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item6.webp">
+          <source type="image/jpeg" srcset="img/item6.jpg">
+          <img src="img/item6.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -257,7 +316,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item7.jpg" alt="" />
+        <!-- <img src="./img/item7.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item7.webp">
+          <source type="image/jpeg" srcset="img/item7.jpg">
+          <img src="img/item7.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -275,7 +339,12 @@
         </div>
       </div>
       <div class="img-card">
-        <img src="./img/item8.jpg" alt="" />
+        <!-- <img src="./img/item8.jpg" alt="food item" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/item8.webp">
+          <source type="image/jpeg" srcset="img/item8.jpg">
+          <img src="img/item8.jpg" alt="food item">
+        </picture>
         <div class="card-info">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -297,25 +366,35 @@
   <section class="chef">
     <div class="chef-l">
       <div class="hero-img">
-        <img src="./img/chef.jpg" alt="chef" />
+        <!-- <img src="./img/chef.jpg" alt="chef" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/chef.webp">
+          <source type="image/jpeg" srcset="img/chef.jpg">
+          <img src="img/chef.jpg" alt="chef">
+        </picture>
       </div>
     </div>
     <div class="chef-r">
       <h4>Chef's Word</h4>
       <h1 class="h-main h-main-s">What We Belive In</h1>
       <p class="desc">
-        <span class="quote">"</span>There are no divisions in my kitchen or my restaurant. We always say, ‘The guest is
-        an incarnation of God.’ I want people to feel that they are valued. They will be looked after as if they’ve gone
-        to a relative’s house. I’m cooking food from my home, from meals I’ve had in my family. I tell them the stories
-        of the dishes. I’m taking their hand, and taking them along. My aim is for you to leave feeling like someone had
-        embraced you. That’s how food should be. I get happiness from seeing people’s eyes when they eat the food I’ve
-        cooked. That feeling, when you can light up someone’s soul with something you’ve prepared, that is a privilege
+        <span class="quote">"</span>There are no divisions in my kitchen or my restaurant. We always say, 'The guest is
+        an incarnation of God.' I want people to feel that they are valued. They will be looked after as if they've gone
+        to a relative's house. I'm cooking food from my home, from meals I've had in my family. I tell them the stories
+        of the dishes. I'm taking their hand, and taking them along. My aim is for you to leave feeling like someone had
+        embraced you. That's how food should be. I get happiness from seeing people's eyes when they eat the food I've
+        cooked. That feeling, when you can light up someone's soul with something you've prepared, that is a privilege
         and an honor.
       </p>
       <h3 class="sub-heading">Kevin Luo</h3>
       <span class="small-heading">Chef & Founder</span>
       <div class="sign">
-        <img src="./img/signature.png" alt="" />
+        <!-- <img src="./img/signature.png" alt="chef signature" /> -->
+        <picture>
+          <source type="image/webp" srcset="img/signature.webp">
+          <source type="image/jpeg" srcset="img/signature.jpg">
+          <img src="img/signature.jpg" alt="chef signature">
+        </picture>
       </div>
     </div>
   </section>
@@ -329,7 +408,12 @@
       <div class="reviews-container">
         <div class="reviews">
           <div class="customer-img">
-            <img src="./img/customer1.png" alt="" />
+            <!-- <img src="./img/customer1.png" alt="kevin luo" /> -->
+            <picture>
+              <source type="image/webp" srcset="img/customer1.webp">
+              <source type="image/jpeg" srcset="img/customer1.jpg">
+              <img src="img/customer1.jpg" alt="kevin luo">
+            </picture>
           </div>
           <div>
             <p class="desc">
@@ -343,7 +427,12 @@
         </div>
         <div class="reviews">
           <div class="customer-img">
-            <img src="./img/customer2.png" alt="" />
+            <!-- <img src="./img/customer2.png" alt="rober fox" /> -->
+            <picture>
+              <source type="image/webp" srcset="img/customer2.webp">
+              <source type="image/jpeg" srcset="img/customer2.jpg">
+              <img src="img/customer2.jpg" alt="rober fox">
+            </picture>
           </div>
           <div>
             <p class="desc">
@@ -356,7 +445,12 @@
         </div>
         <div class="reviews">
           <div class="customer-img">
-            <img src="./img/customer3.png" alt="" />
+            <!-- <img src="./img/customer3.png" alt="jame cooper" /> -->
+            <picture>
+              <source type="image/webp" srcset="img/customer3.webp">
+              <source type="image/jpeg" srcset="img/customer3.jpg">
+              <img src="img/customer3.jpg" alt="jame cooper">
+            </picture>
           </div>
           <div>
             <p class="desc">
@@ -370,7 +464,12 @@
         </div>
         <div class="reviews">
           <div class="customer-img">
-            <img src="./img/customer4.png" alt="" />
+            <!-- <img src="./img/customer4.png" alt="brooklyn simmons" /> -->
+            <picture>
+              <source type="image/webp" srcset="img/customer4.webp">
+              <source type="image/jpeg" srcset="img/customer4.jpg">
+              <img src="img/customer4.jpg" alt="brooklyn simmons">
+            </picture>
           </div>
           <div>
             <p class="desc">
@@ -404,7 +503,6 @@
         <h3 class="h-sub">Contact Us</h3>
         <a href="#">45/1, Shubhash Bose Avenue</a>
         <a href="#">Laxmibazar, Dhaka</a>
-        <a href="#">+1 212-344-1230</a>
         <a href="#">+1 212-555-1230</a>
       </div>
       <div class="footer-m">
@@ -413,11 +511,11 @@
           "The best way to find yourself is to lose yourself in the service
           of others.”
         </p>
-        <div class="icon">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
+        <ul class="icon">
+          <li><i class="fab fa-facebook-f"><a href="https://www.facebook.com/hrsshainik/"></a></i></li>
+          <li><i class="fab fa-twitter"><a href="https://twitter.com/hrsshainik/"></a></i></li>
+          <li><i class="fab fa-instagram"><a href="https://www.instagram.com/traveloperhabib/"></a></i></li>
+        </ul>
       </div>
       <div class="footer-r">
         <h3 class="h-sub">Working Hours</h3>

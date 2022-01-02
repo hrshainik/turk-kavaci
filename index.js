@@ -6,9 +6,9 @@ const navItems = navLinks.querySelectorAll("li a");
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
     document.querySelector("body").style.visibility = "hidden";
-    document.querySelector(".lds-ellipsis").style.visibility = "visible";
+    document.querySelector(".loading").style.visibility = "visible";
   } else {
-    document.querySelector(".lds-ellipsis").style.display = "none";
+    document.querySelector(".loading").style.display = "none";
     document.querySelector("body").style.visibility = "visible";
   }
 };
@@ -87,7 +87,7 @@ const swiper = new Swiper(".mySwiper", {
       );
     },
   },
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
 });
