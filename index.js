@@ -3,8 +3,17 @@ const burgerIcon = document.querySelector(".ham");
 const navLinks = document.querySelector(".items");
 const navItems = navLinks.querySelectorAll("li a");
 
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".lds-ellipsis").style.visibility = "visible";
+  } else {
+    document.querySelector(".lds-ellipsis").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
 document.addEventListener("click", (e) => {
-  console.log(e.target);
   if (
     !e.target.classList.contains("burger") &&
     !e.target.classList.contains("items") &&
@@ -39,7 +48,6 @@ const swiper = new Swiper(".mySwiper", {
       direction: "vertical",
       on: {
         progress: function () {
-          console.log("test");
           let swiper = this;
 
           for (let i = 0; i < swiper.slides.length; i++) {

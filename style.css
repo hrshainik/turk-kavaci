@@ -66,6 +66,118 @@ a {
   color: inherit;
 }
 
+.lds-ellipsis {
+  display: block;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 3.3rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: #dcca87;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 0.8rem;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 0.8rem;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 3.2rem;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 5.6rem;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(2.4rem, 0);
+            transform: translate(2.4rem, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(2.4rem, 0);
+            transform: translate(2.4rem, 0);
+  }
+}
+
 .mySwiper {
   width: 100%;
   height: 100vh;
@@ -470,12 +582,15 @@ nav .burger div {
 }
 
 .items li a {
+  font-family: "Cormorant Upright", serif;
+  font-weight: bold;
   color: #e0e0e0;
+  font-size: 1.8rem;
   text-decoration: none;
+  letter-spacing: 1px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-transform: uppercase;
-  font-weight: 400;
 }
 
 .items li a::after {
@@ -1274,7 +1389,7 @@ footer .footer-container .footer-m p {
 
 footer .footer-container .footer-m img {
   width: 100%;
-  max-width: 15rem;
+  max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
