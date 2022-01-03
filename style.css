@@ -263,12 +263,12 @@ a {
 }
 
 .h-main-s {
-  font-size: 6.4rem;
+  font-size: 4.8rem;
 }
 
 @media only screen and (max-width: 835px) {
   .h-main-s {
-    font-size: 4.6rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -283,6 +283,12 @@ a {
   -webkit-font-feature-settings: "tnum" on, "lnum" on;
           font-feature-settings: "tnum" on, "lnum" on;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 835px) {
+  .h-sub {
+    font-size: 2rem;
+  }
 }
 
 .para {
@@ -667,6 +673,7 @@ nav .burger div {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-top: 3rem;
+    gap: 1.5rem;
   }
 }
 
@@ -678,7 +685,7 @@ nav .burger div {
 
 @media only screen and (max-width: 715px) {
   .hero-l {
-    margin-top: 3rem;
+    margin-top: 2.6rem;
     -webkit-box-flex: 1;
         -ms-flex: 1 100%;
             flex: 1 100%;
@@ -689,12 +696,36 @@ nav .burger div {
   margin-bottom: 0.8rem;
 }
 
+@media only screen and (max-width: 715px) {
+  .hero-l .h-sub {
+    margin-bottom: 0;
+  }
+}
+
 .hero-l .h-main {
   margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 715px) {
+  .hero-l .h-main {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero-l .h-main {
+    font-size: 4.8rem;
+  }
+}
+
 .hero-l .para {
   margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 715px) {
+  .hero-l .para {
+    margin-bottom: 2rem;
+  }
 }
 
 .hero-r {
@@ -711,7 +742,7 @@ nav .burger div {
 
 @media only screen and (max-width: 715px) {
   .hero-r {
-    margin-top: 5rem;
+    margin-top: 4rem;
     -webkit-box-flex: 1;
         -ms-flex: 1 100%;
             flex: 1 100%;
@@ -804,7 +835,6 @@ nav .burger div {
 @media only screen and (max-width: 715px) {
   .about h2 {
     margin-bottom: 2rem;
-    font-size: 4.2rem;
   }
 }
 
@@ -885,13 +915,6 @@ nav .burger div {
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 2rem;
-}
-
-@media only screen and (max-width: 715px) {
-  .menu-header h1 {
-    font-size: 4.2rem;
-    margin-bottom: 2rem;
-  }
 }
 
 .menu-header .para {
@@ -1076,22 +1099,10 @@ nav .burger div {
           flex: calc(50% - 2.5rem);
 }
 
-@media only screen and (max-width: 715px) {
-  .chef-r h1 {
-    font-size: 4.2rem;
-    line-height: 1;
-  }
-}
-
 .chef-r h3 {
   font-size: 3.2rem;
   color: #dcca87;
   margin-top: 10%;
-}
-
-.chef-r h4 {
-  font-size: 2.3rem;
-  line-height: 130%;
 }
 
 .chef-r .desc {
@@ -1101,11 +1112,23 @@ nav .burger div {
   font-family: "Cabin", sans-serif;
 }
 
+@media only screen and (max-width: 715px) {
+  .chef-r .desc {
+    font-size: 1.8rem;
+  }
+}
+
 .chef-r .desc .quote {
   font-family: "Montagu Slab", serif;
   font-size: 7rem;
   line-height: 100%;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 715px) {
+  .chef-r .desc .quote {
+    font-size: 6rem;
+  }
 }
 
 .chef-r span {
@@ -1139,13 +1162,6 @@ nav .burger div {
 @media only screen and (max-width: 715px) {
   .reviews-wrapper {
     padding: 6rem 0 0 0;
-  }
-}
-
-@media only screen and (max-width: 715px) {
-  .reviews-wrapper .reviews-header h1 {
-    font-size: 4.8rem;
-    line-height: 1;
   }
 }
 
@@ -1238,7 +1254,7 @@ nav .burger div {
 }
 
 .reviews-wrapper .reviews-bottom .reviews-container .reviews div p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .reviews-wrapper .reviews-bottom .reviews-container .reviews div h3 {
@@ -1267,13 +1283,6 @@ nav .burger div {
   text-align: center;
   -webkit-box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.21);
-}
-
-@media only screen and (max-width: 715px) {
-  .subscribe-header h1 {
-    font-size: 3.6rem;
-    line-height: 1;
-  }
 }
 
 .subscribe-header h4 {

@@ -228,10 +228,10 @@ a {
   }
 
   &-s {
-    font-size: 6.4rem;
+    font-size: 4.8rem;
 
     @include mq(835px) {
-      font-size: 4.6rem;
+      font-size: 3.6rem;
     }
   }
 }
@@ -246,6 +246,10 @@ a {
   text-transform: capitalize;
   font-feature-settings: "tnum" on, "lnum" on;
   color: $clr5;
+
+  @include mq(835px) {
+    font-size: 2rem;
+  }
 }
 
 .para {
@@ -557,11 +561,12 @@ nav {
     flex-flow: column;
     justify-content: flex-start;
     margin-top: 3rem;
+    gap: 1.5rem;
   }
 
   &-l {
     @include mq(715px) {
-      margin-top: 3rem;
+      margin-top: 2.6rem;
       flex: 1 100%;
     }
 
@@ -569,14 +574,30 @@ nav {
 
     & .h-sub {
       margin-bottom: 0.8rem;
+
+      @include mq(715px) {
+        margin-bottom: 0;
+      }
     }
 
     & .h-main {
       margin-bottom: 3rem;
+
+      @include mq(715px) {
+        margin-bottom: 1rem;
+      }
+
+      @include mq(400px) {
+        font-size: 4.8rem;
+      }
     }
 
     & .para {
       margin-bottom: 3rem;
+
+      @include mq(715px) {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -586,7 +607,7 @@ nav {
     justify-content: center;
 
     @include mq(715px) {
-      margin-top: 5rem;
+      margin-top: 4rem;
       flex: 1 100%;
       width: 80%;
     }
@@ -659,7 +680,6 @@ nav {
   & h2 {
     @include mq(715px) {
       margin-bottom: 2rem;
-      font-size: 4.2rem;
     }
   }
 
@@ -716,13 +736,6 @@ nav {
     text-align: center;
     padding-bottom: 2rem;
     padding-top: 2rem;
-
-    & h1 {
-      @include mq(715px) {
-        font-size: 4.2rem;
-        margin-bottom: 2rem;
-      }
-    }
 
     & .para {
       margin: 0 auto;
@@ -859,22 +872,10 @@ nav {
   &-r {
     flex: calc(50% - 2.5rem);
 
-    & h1 {
-      @include mq(715px) {
-        font-size: 4.2rem;
-        line-height: 1;
-      }
-    }
-
     & h3 {
       font-size: 3.2rem;
       color: $clr1;
       margin-top: 10%;
-    }
-
-    & h4 {
-      font-size: 2.3rem;
-      line-height: 130%;
     }
 
     & .desc {
@@ -883,11 +884,19 @@ nav {
       margin-top: 5%;
       font-family: "Cabin", sans-serif;
 
+      @include mq(715px) {
+        font-size: 1.8rem;
+      }
+
       & .quote {
         font-family: "Montagu Slab", serif;
         font-size: 7rem;
         line-height: 100%;
         font-weight: 400;
+
+        @include mq(715px) {
+          font-size: 6rem;
+        }
       }
     }
 
@@ -918,13 +927,6 @@ nav {
   }
 
   & .reviews-header {
-    & h1 {
-      @include mq(715px) {
-        font-size: 4.8rem;
-        line-height: 1;
-      }
-    }
-
     & h4 {
       font-family: "Cormorant Upright", serif;
       font-size: 2.3rem;
@@ -990,7 +992,7 @@ nav {
         }
         & div {
           & p {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
           }
 
           & h3 {
@@ -1016,13 +1018,6 @@ nav {
   box-shadow: 6px 7px 5px 0px rgba(0, 0, 0, 0.21);
 
   &-header {
-    & h1 {
-      @include mq(715px) {
-        font-size: 3.6rem;
-        line-height: 1;
-      }
-    }
-
     & h4 {
       font-size: 2.3rem;
       font-family: "Cormorant Upright", serif;
