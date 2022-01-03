@@ -323,6 +323,74 @@ a {
   }
 }
 
+#turk path {
+  &:nth-child(1) {
+    stroke-dasharray: 99.595;
+    stroke-dashoffset: 99.595;
+    animation: line-anim 1.5s ease forwards;
+  }
+
+  &:nth-child(2) {
+    stroke-dasharray: 126.54;
+    stroke-dashoffset: 126.54;
+    animation: line-anim 1.5s ease forwards 0.2s;
+  }
+
+  &:nth-child(3) {
+    stroke-dasharray: 122.13;
+    stroke-dashoffset: 122.13;
+    animation: line-anim 1.5s ease forwards 0.4s;
+  }
+
+  &:nth-child(4) {
+    stroke-dasharray: 129.99;
+    stroke-dashoffset: 129.99;
+    animation: line-anim 1.5s ease forwards 0.6s;
+  }
+
+  &:nth-child(5) {
+    stroke-dasharray: 129.99;
+    stroke-dashoffset: 129.99;
+    animation: line-anim 1.5s ease forwards 0.8s;
+  }
+
+  &:nth-child(6) {
+    stroke-dasharray: 104.91;
+    stroke-dashoffset: 104.91;
+    animation: line-anim 1.5s ease forwards 1s;
+  }
+
+  &:nth-child(7) {
+    stroke-dasharray: 96.63;
+    stroke-dashoffset: 96.63;
+    animation: line-anim 1.5s ease forwards 1.2s;
+  }
+
+  &:nth-child(8) {
+    stroke-dasharray: 104.91;
+    stroke-dashoffset: 104.91;
+    animation: line-anim 1.5s ease forwards 1.4s;
+  }
+
+  &:nth-child(9) {
+    stroke-dasharray: 98.35;
+    stroke-dashoffset: 98.35;
+    animation: line-anim 1.5s ease forwards 1.6s;
+  }
+
+  &:nth-child(10) {
+    stroke-dasharray: 60.53;
+    stroke-dashoffset: 60.53;
+    animation: line-anim 1.5s ease forwards 1.8s;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 nav {
   background-color: $clr3;
   position: fixed;

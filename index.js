@@ -13,6 +13,13 @@ const navItems = navLinks.querySelectorAll("li a");
 //   }
 // };
 
+const logo = document.querySelectorAll("#turk path");
+const paths = Array.from(logo);
+
+paths.map((path, i) => {
+  console.log(`Letter ${i} is ${path.getTotalLength()}`);
+});
+
 document.addEventListener("click", (e) => {
   if (
     !e.target.classList.contains("burger") &&
