@@ -513,7 +513,7 @@ nav .burger {
 @media only screen and (max-width: 920px) {
   nav .burger {
     display: block;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 }
 
@@ -950,7 +950,7 @@ nav .burger div {
   position: relative;
 }
 
-.menu .img-card-con .img-card::before {
+.menu .img-card-con .img-card::before, .menu .img-card-con .img-card::after {
   position: absolute;
   content: "";
   top: 0;
@@ -963,10 +963,21 @@ nav .burger div {
   z-index: -3;
 }
 
-.menu .img-card-con .img-card:hover::before {
+.menu .img-card-con .img-card::before {
   border: 1px solid #dcca8760;
-  -webkit-transform: translate(5px, 5px);
-          transform: translate(5px, 5px);
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+}
+
+.menu .img-card-con .img-card::after {
+  border: 1px solid #dcca8760;
+  -webkit-transform: translate(7px, 7px);
+          transform: translate(7px, 7px);
+}
+
+.menu .img-card-con .img-card:hover::before, .menu .img-card-con .img-card:hover::after {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .menu .img-card-con .img-card img {

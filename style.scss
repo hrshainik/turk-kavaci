@@ -441,7 +441,7 @@ nav {
 
     @include mq(920px) {
       display: block;
-      margin-top: 2px;
+      margin-top: 1px;
     }
 
     & .ham {
@@ -758,7 +758,8 @@ nav {
       border: 1px solid #dcca8760;
       position: relative;
 
-      &::before {
+      &::before,
+      &::after {
         position: absolute;
         content: "";
         top: 0;
@@ -770,9 +771,23 @@ nav {
         z-index: -3;
       }
 
-      &:hover::before {
+      // &:hover {
+      &::before {
         border: 1px solid #dcca8760;
-        transform: translate(5px, 5px);
+        transform: translate(4px, 4px);
+      }
+
+      &::after {
+        border: 1px solid #dcca8760;
+        transform: translate(7px, 7px);
+      }
+      // }
+
+      &:hover {
+        &::before,
+        &::after {
+          transform: translate(0, 0);
+        }
       }
 
       & img {
