@@ -675,6 +675,7 @@ nav {
 
   @include mq(715px) {
     flex-direction: column;
+    gap: 2rem;
   }
 
   & h2 {
@@ -694,14 +695,18 @@ nav {
   &-grid {
     display: flex;
     gap: 1.5rem;
+
+    & picture img {
+      width: 100%;
+      height: 100%;
+    }
+
     & div {
       display: flex;
       gap: 1.5rem;
       flex-flow: column wrap;
-      img {
-        width: 100%;
-      }
     }
+
     & .r-img-one {
       flex-grow: 1;
     }
@@ -758,6 +763,12 @@ nav {
       border: 1px solid #dcca8760;
       position: relative;
 
+      & picture {
+        & img {
+          display: block;
+        }
+      }
+
       &::before,
       &::after {
         position: absolute;
@@ -771,7 +782,6 @@ nav {
         z-index: -3;
       }
 
-      // &:hover {
       &::before {
         border: 1px solid #dcca8760;
         transform: translate(4px, 4px);
@@ -781,19 +791,12 @@ nav {
         border: 1px solid #dcca8760;
         transform: translate(7px, 7px);
       }
-      // }
 
       &:hover {
         &::before,
         &::after {
           transform: translate(0, 0);
         }
-      }
-
-      & img {
-        display: block;
-        height: auto;
-        width: 100%;
       }
 
       & .card-info {
@@ -859,7 +862,7 @@ nav {
 
   @include mq(715px) {
     flex-flow: column wrap;
-    padding: 5rem 0;
+    padding: 8rem 0 4rem 0;
   }
 
   &-l {
