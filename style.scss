@@ -96,9 +96,11 @@ a {
   0% {
     background-position: -150% 0, -150% 0;
   }
+
   66% {
     background-position: 250% 0, -150% 0;
   }
+
   100% {
     background-position: 250% 0, 250% 0;
   }
@@ -108,10 +110,10 @@ a {
   width: 100%;
   height: 100vh;
   position: relative;
-  padding-top: $navH !important;
+  padding-top: $navH  !important;
 
   @include mq(920px) {
-    padding-top: $navHM !important;
+    padding-top: $navHM  !important;
   }
 
   @include mq(715px) {
@@ -279,6 +281,7 @@ a {
 }
 
 .animated-button {
+
   &:link,
   &:visited {
     position: relative;
@@ -696,7 +699,7 @@ nav {
     display: flex;
     gap: 1.5rem;
 
-    & picture img {
+    & img {
       width: 100%;
       height: 100%;
     }
@@ -723,7 +726,7 @@ nav {
       margin-bottom: 1.4rem;
     }
 
-    & > .btn {
+    &>.btn {
       margin-top: 2.5rem;
     }
   }
@@ -763,10 +766,8 @@ nav {
       border: 1px solid #dcca8760;
       position: relative;
 
-      & picture {
-        & img {
-          display: block;
-        }
+      & img {
+        display: block;
       }
 
       &::before,
@@ -793,6 +794,7 @@ nav {
       }
 
       &:hover {
+
         &::before,
         &::after {
           transform: translate(0, 0);
@@ -998,7 +1000,7 @@ nav {
           }
         }
 
-        & > div {
+        &>div {
           flex: 1;
         }
 
@@ -1008,6 +1010,7 @@ nav {
             width: 12rem;
           }
         }
+
         & div {
           & p {
             font-size: 1.6rem;
@@ -1060,7 +1063,7 @@ nav {
       gap: 2rem;
     }
 
-    & > .victoria-one {
+    &>.victoria-one {
       border: 1px solid #dcca875e;
     }
 
@@ -1166,6 +1169,7 @@ footer {
         margin-top: 5%;
         display: block;
       }
+
       @include mq(668px) {
         text-align: center;
       }
@@ -1177,6 +1181,7 @@ footer {
       }
     }
   }
+
   & .copyright {
     color: $clr5;
     text-align: center;
