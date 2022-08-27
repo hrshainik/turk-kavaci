@@ -1499,4 +1499,34 @@ footer .copyright {
   padding-bottom: 3rem;
 }
 
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: .9;
+  z-index: var(--z-tooltip);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+  opacity: 1;
+}
+
+.scrollup__icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Show scroll */
+.show-scroll {
+  bottom: 5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

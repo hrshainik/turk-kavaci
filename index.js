@@ -2,17 +2,6 @@ const burger = document.querySelector(".burger");
 const burgerIcon = document.querySelector(".ham");
 const navLinks = document.querySelector(".items");
 const navItems = navLinks.querySelectorAll("li a");
-
-// document.onreadystatechange = function () {
-//   if (document.readyState !== "complete") {
-//     document.querySelector("body").style.visibility = "hidden";
-//     document.querySelector(".loading").style.visibility = "visible";
-//   } else {
-//     document.querySelector(".loading").style.display = "none";
-//     document.querySelector("body").style.visibility = "visible";
-//   }
-// };
-
 const logo = document.querySelectorAll("#turk path");
 const paths = Array.from(logo);
 
@@ -98,3 +87,10 @@ const swiper = new Swiper(".mySwiper", {
   //   delay: 5000,
   // },
 });
+
+function scrollUp(){
+  const scrollUp = document.getElementById('scroll-up');
+  // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
